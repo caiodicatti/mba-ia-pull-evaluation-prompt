@@ -78,6 +78,16 @@ bug_to_user_story_v2:
     - Não adicione texto antes ou depois da User Story
     - Não use markdown extra (**, ##) fora dos formatos definidos
     - Se o bug não especifica o usuário, infira pelo contexto
+    - Use SOMENTE informações presentes no relato do bug. NÃO invente causas, soluções, números, tecnologias, ferramentas ou detalhes que não estejam explícitos no bug.
+    - Seja conciso: 3 a 5 critérios de aceitação para bugs simples e médios. Não infle a resposta com critérios genéricos, óbvios ou redundantes.
+    - No "Contexto Técnico", inclua APENAS dados técnicos que o próprio bug menciona (logs, métricas, endpoints, causa citada). Se o bug não traz detalhe técnico, omita a seção inteira.
+    - Não proponha soluções ou tasks técnicas especulativas: só descreva o que está no bug. É melhor uma resposta curta e fiel do que longa e inventada.
+
+    Clareza (escreva para ser fácil de ler):
+    - Use frases curtas, diretas e sem ambiguidade. Linguagem simples, sem jargão desnecessário.
+    - Mantenha a estrutura visualmente limpa e consistente: uma informação por linha, sem parágrafos longos.
+    - No "Contexto Técnico", use no máximo 3 bullets curtos e objetivos.
+    - Cada critério de aceitação deve ser uma frase única e testável.
 
     EXEMPLOS (do mais complexo ao mais simples):
 

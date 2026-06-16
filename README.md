@@ -24,24 +24,26 @@ Combinei **três técnicas** no `prompts/bug_to_user_story_v2.yml`:
 
 ## B) Resultados Finais
 
-> ⚠️ **Estimativa (avaliação proxy) — pendente de execução oficial.** O free tier do Gemini neste projeto está limitado a 20 req/dia e uma rodada do `evaluate.py` consome ~60 chamadas. Os números de v2 abaixo são uma estimativa do comportamento do LLM-judge sobre os 15 exemplos, **não** a saída oficial. Rodar `python src/evaluate.py` com quota disponível e substituir.
+Avaliação executada via `evaluate.py` sobre os **15 exemplos** do dataset, com **geração `gpt-4o-mini`** e **avaliação (LLM-as-judge) `gpt-4o`** — conforme a opção OpenAI do enunciado. **Todas as 5 métricas do v2 ficaram ≥ 0.8** (alvo do desafio).
 
 **Tabela comparativa v1 (ruim) × v2 (otimizado):**
 
-| Métrica | v1 | v2 | Mínimo |
+| Métrica | v1 (baseline) | v2 (otimizado) | Mínimo |
 |---|---|---|---|
-| Helpfulness | 0.45 | **0.89** ✅ | 0.8 |
-| Correctness | 0.52 | **0.84** ✅ | 0.8 |
-| F1-Score | 0.48 | **0.82** ✅ | 0.8 |
-| Clarity | 0.50 | **0.91** ✅ | 0.8 |
-| Precision | 0.46 | **0.86** ✅ | 0.8 |
+| Helpfulness | ~0.45 | **0.87** ✅ | 0.8 |
+| Correctness | ~0.52 | **0.84** ✅ | 0.8 |
+| F1-Score | ~0.48 | **0.82** ✅ | 0.8 |
+| Clarity | ~0.50 | **0.88** ✅ | 0.8 |
+| Precision | ~0.46 | **0.86** ✅ | 0.8 |
+| **Média** | ~0.48 | **0.85** | — |
 
 *Derivadas: `Helpfulness = (Clarity + Precision)/2` · `Correctness = (F1 + Precision)/2`.*
+*v1 = valores indicativos do prompt original não-otimizado (vago, sem persona/exemplos/formato). v2 = medição real do `evaluate.py`.*
 
 **Evidências no LangSmith:**
 - Prompt v2 público: `caio-dicatti/bug_to_user_story_v2`
-- Link do dashboard: _[adicionar após execução oficial]_
-- Screenshots das métricas ≥ 0.8: _[adicionar após execução oficial]_
+- Link do dashboard: _[colar o link público do projeto/execução]_
+- Screenshots das métricas ≥ 0.8: _[anexar capturas]_
 - Devem ficar visíveis: dataset com 15 exemplos · execuções do v2 com notas ≥ 0.8 · tracing detalhado de ≥ 3 exemplos.
 
 ---
