@@ -40,11 +40,25 @@ Avaliação executada via `evaluate.py` sobre os **15 exemplos** do dataset, com
 *Derivadas: `Helpfulness = (Clarity + Precision)/2` · `Correctness = (F1 + Precision)/2`.*
 *v1 = valores indicativos do prompt original não-otimizado (vago, sem persona/exemplos/formato). v2 = medição real do `evaluate.py`.*
 
-**Evidências no LangSmith:**
-- Prompt v2 público: `caio-dicatti/bug_to_user_story_v2`
-- Link do dashboard: _[colar o link público do projeto/execução]_
-- Screenshots das métricas ≥ 0.8: _[anexar capturas]_
-- Devem ficar visíveis: dataset com 15 exemplos · execuções do v2 com notas ≥ 0.8 · tracing detalhado de ≥ 3 exemplos.
+### Evidências no LangSmith
+
+🔗 **Prompt v2 (público):** https://smith.langchain.com/hub/caio-dicatti/bug_to_user_story_v2
+
+**1. Métricas da avaliação — todas ≥ 0.8 (saída do `evaluate.py`):**
+
+![Métricas da avaliação](docs/01-metricas-evaluate-terminal.png)
+
+**2. Dataset de avaliação com os 15 exemplos:**
+
+![Dataset com 15 exemplos](docs/02-dataset-15-exemplos.png)
+
+**3. Tracing das execuções no LangSmith:**
+
+![Tracing das execuções](docs/03-tracing-execucoes.png)
+
+**4. Trace detalhado de um exemplo (bug → prompt → resposta gerada):**
+
+![Trace detalhado](docs/04-trace-detalhado.png)
 
 ---
 
